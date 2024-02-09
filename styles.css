@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(90deg, #4a4a4a, #800080, #4a4a4a);
+    background-size: 200% 100%;
+    animation: gradient 5s infinite;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    color: #ff66b2;
+}
+
+main {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    transition: transform 0.3s ease-in-out, color 5s ease-in-out;
+    animation: pulsate 2s infinite, colorChange 20s infinite;
+}
+
+h1:hover {
+    color: #000000;
+}
+
+.music {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ff66b2;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* Larger music on/off button for index.html */
+#musicToggle {
+    padding: 10px 20px;
+    font-size: 1.2em;
+}
+
+/* Smaller music on/off button for clickme.html */
+#musicToggle.smallButton {
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ff66b2;
+    }
+    25% {
+        color: #808080;
+    }
+    50% {
+        color: #ffffff;
+    }
+    75% {
+        color: #c0c0c0;
+    }
+    100% {
+        color: #ff66b2;
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
